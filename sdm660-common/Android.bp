@@ -46,17 +46,6 @@ cc_prebuilt_library_shared {
 }
 
 android_app_import {
-	name: "WfdService",
-	owner: "bq",
-	apk: "proprietary/priv-app/WfdService/WfdService.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-}
-
-android_app_import {
 	name: "TimeService",
 	owner: "bq",
 	apk: "proprietary/vendor/app/TimeService/TimeService.apk",
@@ -136,9 +125,121 @@ android_app_import {
 }
 
 dex_import {
-	name: "WfdCommon",
+	name: "com.qti.location.sdk",
 	owner: "bq",
-	jars: ["proprietary/framework/WfdCommon.jar"],
+	jars: ["proprietary/framework/com.qti.location.sdk.jar"],
+}
+
+dex_import {
+	name: "QtiTelephonyServicelibrary",
+	owner: "bq",
+	jars: ["proprietary/product/framework/QtiTelephonyServicelibrary.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "com.qti.dpmframework",
+	owner: "bq",
+	jars: ["proprietary/product/framework/com.qti.dpmframework.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "com.qualcomm.qti.imscmservice-V2.0-java",
+	owner: "bq",
+	jars: ["proprietary/product/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "com.qualcomm.qti.imscmservice-V2.1-java",
+	owner: "bq",
+	jars: ["proprietary/product/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "com.qualcomm.qti.uceservice-V2.0-java",
+	owner: "bq",
+	jars: ["proprietary/product/framework/com.qualcomm.qti.uceservice-V2.0-java.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "dpmapi",
+	owner: "bq",
+	jars: ["proprietary/product/framework/dpmapi.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "embmslibrary",
+	owner: "bq",
+	jars: ["proprietary/product/framework/embmslibrary.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "qcrilhook",
+	owner: "bq",
+	jars: ["proprietary/product/framework/qcrilhook.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "qti-telephony-common",
+	owner: "bq",
+	jars: ["proprietary/product/framework/qti-telephony-common.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.data.factory-V1.0-java",
+	owner: "bq",
+	jars: ["proprietary/product/framework/vendor.qti.data.factory-V1.0-java.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.data.factory-V2.0-java",
+	owner: "bq",
+	jars: ["proprietary/product/framework/vendor.qti.data.factory-V2.0-java.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.data.factory-V2.1-java",
+	owner: "bq",
+	jars: ["proprietary/product/framework/vendor.qti.data.factory-V2.1-java.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.hardware.data.dynamicdds-V1.0-java",
+	owner: "bq",
+	jars: ["proprietary/product/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.callinfo-V1.0-java",
+	owner: "bq",
+	jars: ["proprietary/product/framework/vendor.qti.ims.callinfo-V1.0-java.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsconfig-V1.0-java",
+	owner: "bq",
+	jars: ["proprietary/product/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar"],
+	product_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.latency-V2.0-java",
+	owner: "bq",
+	jars: ["proprietary/product/framework/vendor.qti.latency-V2.0-java.jar"],
+	product_specific: true,
 }
 
 prebuilt_etc_xml {
